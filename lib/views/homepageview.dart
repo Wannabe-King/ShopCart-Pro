@@ -1,3 +1,4 @@
+import 'package:ecommerce/views/productview.dart';
 import 'package:flutter/material.dart';
 
 class HomePageView extends StatefulWidget {
@@ -15,7 +16,7 @@ class _HomePageViewState extends State<HomePageView> {
         child: Column(children: [
           const Padding(
             padding: EdgeInsets.all(20.0),
-            child: const Row(
+            child: Row(
               children: [
                 Text(
                   'Search products',
@@ -138,29 +139,35 @@ class _HomePageViewState extends State<HomePageView> {
               children: [
                 Padding(
                   padding: const EdgeInsets.only(left: 20.0),
-                  child: Container(
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        color: Colors.grey.shade200),
-                    width: 200,
-                    height: 300,
-                    child: Padding(
-                      padding: const EdgeInsets.all(10.0),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          const Text(
-                            'Air Jorden I Travis Scott OG',
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 25),
-                          ),
-                          Image.asset('assets/images/shoe.png'),
-                          const Text(
-                            '₹ 5000 ',
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 25),
-                          ),
-                        ],
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.of(context)
+                          .pushNamed('/productview'); // Navigate to ProductView
+                    },
+                    child: Container(
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Colors.grey.shade200),
+                      width: 200,
+                      height: 300,
+                      child: Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            const Text(
+                              'Air Jorden I Travis Scott OG',
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold, fontSize: 25),
+                            ),
+                            Image.asset('assets/images/shoe.png'),
+                            const Text(
+                              '₹ 5000 ',
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold, fontSize: 25),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),
@@ -199,14 +206,14 @@ class _HomePageViewState extends State<HomePageView> {
           ),
           const Padding(
             padding: EdgeInsets.all(20.0),
-            child: const Row(
+            child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
                   'New Releases',
                   style: TextStyle(fontSize: 16),
                 ),
-                const Row(
+                Row(
                   children: [
                     Text(
                       'Sort By',

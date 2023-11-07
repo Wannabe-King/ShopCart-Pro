@@ -1,10 +1,14 @@
 import 'package:ecommerce/views/HomepageView.dart';
+import 'package:ecommerce/views/productview.dart';
 import 'package:flutter/material.dart';
 
 void main() {
   runApp(MaterialApp(
     theme: ThemeData(fontFamily: 'RobotoMono'),
     home: const HomePageView(),
+    routes: {
+      '/productview': (context) => const ProductView(), // Define the route for ProductView
+    },
   ));
 }
 
