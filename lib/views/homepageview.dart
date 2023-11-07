@@ -15,7 +15,7 @@ class _HomePageViewState extends State<HomePageView> {
         child: Column(children: [
           const Padding(
             padding: EdgeInsets.all(20.0),
-            child: Row(
+            child: const Row(
               children: [
                 Text(
                   'Search products',
@@ -199,14 +199,14 @@ class _HomePageViewState extends State<HomePageView> {
           ),
           const Padding(
             padding: EdgeInsets.all(20.0),
-            child: Row(
+            child: const Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
                   'New Releases',
                   style: TextStyle(fontSize: 16),
                 ),
-                Row(
+                const Row(
                   children: [
                     Text(
                       'Sort By',
