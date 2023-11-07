@@ -131,6 +131,125 @@ class _HomePageViewState extends State<HomePageView> {
                 ],
               ),
             ),
+          ),
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(left: 20.0),
+                  child: Container(
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: Colors.grey.shade200),
+                    width: 200,
+                    height: 300,
+                    child: Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          const Text(
+                            'Air Jorden I Travis Scott OG',
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold, fontSize: 25),
+                          ),
+                          Image.asset('assets/images/shoe.png'),
+                          const Text(
+                            '₹ 5000 ',
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold, fontSize: 25),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 20.0),
+                  child: Container(
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: Colors.grey.shade200),
+                    width: 200,
+                    height: 300,
+                    child: Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          const Text(
+                            'Nike Air Max Sneakers',
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold, fontSize: 25),
+                          ),
+                          Image.asset('assets/images/air_max.png'),
+                          const Text(
+                            '₹ 6000 ',
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold, fontSize: 25),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          const Padding(
+            padding: EdgeInsets.all(20.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  'New Releases',
+                  style: TextStyle(fontSize: 16),
+                ),
+                Row(
+                  children: [
+                    Text(
+                      'Sort By',
+                      style: TextStyle(fontSize: 16),
+                    ),
+                    Icon(Icons.arrow_downward_sharp),
+                  ],
+                )
+              ],
+            ),
+          ),
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: [
+                Container(
+                  margin: const EdgeInsets.only(left: 20),
+                  decoration: BoxDecoration(
+                      color: Colors.grey.shade300,
+                      borderRadius: BorderRadius.circular(30)),
+                  width: 150,
+                  child: Image.asset('assets/images/shoe.png'),
+                ),
+                Container(
+                  margin: const EdgeInsets.only(left: 20),
+                  decoration: BoxDecoration(
+                      color: Colors.grey.shade300,
+                      borderRadius: BorderRadius.circular(30)),
+                  width: 150,
+                  height: 150,
+                  child: Image.asset('assets/images/air_max.png'),
+                ),
+                Container(
+                  margin: const EdgeInsets.only(left: 20),
+                  decoration: BoxDecoration(
+                      color: Colors.grey.shade300,
+                      borderRadius: BorderRadius.circular(30)),
+                  width: 150,
+                  height: 150,
+                  child: Image.asset('assets/images/air_max.png'),
+                )
+              ],
+            ),
           )
         ]),
       ),
